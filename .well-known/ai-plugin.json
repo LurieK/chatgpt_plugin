@@ -1,0 +1,18 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "ChatGPT Book Recommendation Plugin",
+    "name_for_model": "book_rec",
+    "description_for_human": "Plugin for recommending books. You can get a book recommendation based on a genre, subject, or writing style.",
+    "description_for_model": "Plugin for recommending books. You can get a book recommendation based on a genre, subject, or writing style.",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "http://localhost:3000/openapi.yaml",
+        "is_user_authenticated": false
+    },
+    "logo_url": "http://localhost:3000/logo.png",
+    "contact_email": "support@yourdomain.com",
+    "legal_info_url": "http://www.yourdomain.com/legal"
+}
