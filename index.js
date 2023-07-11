@@ -10,5 +10,6 @@ let books = [
 
 const getBookRecommendaton= async function(req, res) {
     const {genre} = req.body;
+    const book = books.find(book.genre === genre)
     
 }
