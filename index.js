@@ -6,4 +6,9 @@ let books = [
     { genre: 'Mystery', title: 'The Da Vinci Code', author: 'Dan Brown' },
     { genre: 'Thriller', title: 'The Girl with the Dragon Tattoo', author: 'Stieg Larsson' },
     { genre: 'Science Fiction', title: 'Dune', author: 'Frank Herbert' }
-]
+];
+
+const getBookRecommendaton= async function(req, res) {
+    const {genre} = req.body;
+    
+}
