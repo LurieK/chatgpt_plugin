@@ -17,3 +17,7 @@ const getBookRecommendaton= async function(req, res) {
         res.status(404).json({error: 'No books found for that genre'})
     }
 }
+
+router.post('/', getBookRecommendaton);
+
+module.exports = router
