@@ -14,6 +14,10 @@ app.use((req, res, next) => {
     next()
 })
 
-app.use(openaiRoutese)
+app.use(openaiRoutes)
 
-app
+app.use('/recommend', recRouter);
+
+app.listen(PORT, ()=> {
+    console.log(`Plugin server listening on port ${PORT}`);
+})
