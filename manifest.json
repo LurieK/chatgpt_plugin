@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "ChatGPT Book Recommendation",
     "version": "1.0",
-    "permissions": ["http://*/*", "https://*/*"],
+    "permissions": ["https://chat.openai.com/*"],
     "content_scripts": [
       {
         "matches": ["https://chat.openai.com/*"],
