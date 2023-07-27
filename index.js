@@ -1,4 +1,4 @@
-const express = requre('express');
+const express = require('express');
 const cors = require('cors');
 const recRouter = require('./routes/recommend');
 const openaiRoutes= require('./routes/openai')
