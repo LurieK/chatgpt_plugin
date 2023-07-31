@@ -10,7 +10,11 @@ let books = [
 
 const getBookRecommendaton= async function(req, res) {
     const {genre} = req.body;
-    const book = books.find(book.genre === genre);
+
+    if (!genre){
+        return res.status(400).json({error:'Genre is required'})
+    }
+    const book = books.find(book=> book.genre === genre);
     if (book){
         res.json(book);
     }else{
