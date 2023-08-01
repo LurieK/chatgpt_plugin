@@ -23,22 +23,78 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Genre'
+/getBooksByGenre
+post: 
+  operationsId: getBooksByGenre
+  summary: Get books based on a genre
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/Genres'
+  responses:
+    "200":
+      description: OK
+      content:
+        applications/json:
+          schema:
+            $ref: '#/components/schema/Books'
+/getBooksByAuthor:
+    post:
+      operationId: getBooksByAuthor
+      summary: Get books by author
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Author'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Books'
 components:
   schemas:
-    BookGenre:
+    BookTitle:
+      type: object
+      properties:
+        title:
+          type: string
+      required:
+        - title
+    Genre:
       type: object
       properties:
         genre:
           type: string
       required:
         - genre
-    Book:
+    Genres:
       type: object
       properties:
-        title:
-          type: string
+        genres:
+          type: array
+          items:
+            type: string
+      required:
+        - genres
+    Author:
+      type: object
+      properties:
         author:
           type: string
       required:
-        - title
         - author
+    Books:
+      type: object
+      properties:
+        books:
+          type: array
+          items:
+            type: string
+      required:
+        - books
