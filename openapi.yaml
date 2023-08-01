@@ -1,28 +1,28 @@
 openapi: 3.0.1
 info:
   title: Book Recommendation Plugin
-  description: A plugin that allows the user to get a book recommendation based on a genre.
+  description: A plugin that allows the user to get a book recommendation based on a genre, author, or book title.
   version: 'v1'
 servers:
   - url: http://localhost:3000
 paths:
-  /recommend:
+  /getGenre:
     post:
-      operationId: getBookRecommendation
-      summary: Get a book recommendation based on a genre
+      operationId: getGenre
+      summary: Get genre of a book
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/BookGenre'
+              $ref: '#/components/schemas/BookTitle'
       responses:
         "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Book'
+                $ref: '#/components/schemas/Genre'
 components:
   schemas:
     BookGenre:
